@@ -3,6 +3,7 @@ using sinemaOtamasyonu.Data;
 using Microsoft.Extensions.Configuration;
 using FluentAssertions.Common;
 using Microsoft.Extensions.Options;
+using sinemaOtamasyonu.Data.Services;
 
 namespace sinemaOtamasyonu
 {
@@ -13,6 +14,7 @@ namespace sinemaOtamasyonu
             var builder = WebApplication.CreateBuilder(args);
             var configuration = builder.Configuration; // IConfiguration arayüzüne eriþim
 
+            builder.Services.AddScoped<IActorsService, ActorsService>();
             
 
             // Add services to the container.
