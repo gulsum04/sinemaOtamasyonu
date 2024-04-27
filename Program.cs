@@ -1,3 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using sinemaOtamasyonu.Data;
+using Microsoft.Extensions.Configuration;
+using FluentAssertions.Common;
+using Microsoft.Extensions.Options;
+
 namespace sinemaOtamasyonu
 {
     public class Program
@@ -5,9 +11,15 @@ namespace sinemaOtamasyonu
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var configuration = builder.Configuration; // IConfiguration arayüzüne eriþim
+
+            
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString")));
+
 
             var app = builder.Build();
 
@@ -29,6 +41,8 @@ namespace sinemaOtamasyonu
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            AppDbInitializer.Seed(app);
 
             app.Run();
         }
