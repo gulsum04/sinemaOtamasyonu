@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using sinemaOtamasyonu.Data;
 using sinemaOtamasyonu.Data.Services;
+using sinemaOtamasyonu.Models;
 
 namespace sinemaOtamasyonu.Controllers
 {
@@ -16,8 +18,34 @@ namespace sinemaOtamasyonu.Controllers
         public async Task<IActionResult> Index()
         {
            // var allActors = await _context.Actors.ToListAsync();
-            var allActors = await _service.GetAll();
+            var allActors = await _service.GetAllAsync();
             return View(allActors);
+        }
+
+        //Get: Actors/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult>Create([Bind("FullName,ProfilePictureURL,Bio")]Actor actor)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View(actor);
+            }
+            await _service.AddAsync(actor);
+            return RedirectToAction(nameof(Index));
+        }
+
+        //Get:Actors/Details/1
+        public async Task<IActionResult> Details(int id)
+        {
+            var actorDetails = await _service.GetByIdAsync(id);
+
+            if (actorDetails == null) return View("NotFound");
+            return View(actorDetails);
         }
     }
 }
