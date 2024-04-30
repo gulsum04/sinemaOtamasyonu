@@ -3,7 +3,7 @@ using sinemaOtamasyonu.Models;
 
 namespace sinemaOtamasyonu.Data.Services
 {
-    public interface IActorsService:IEntityBaseRepository<Actor>
+    public interface IProducersService:IEntityBaseRepository<Producer>
     {
     }
 }
