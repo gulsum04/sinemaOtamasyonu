@@ -1,11 +1,12 @@
-﻿using sinemaOtamasyonu.Data.Enums;
+﻿using sinemaOtamasyonu.Data.Base;
+using sinemaOtamasyonu.Data.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Principal;
 
 namespace sinemaOtamasyonu.Models
 {
-    public class Movie
+    public class Movie:IEntityBase
     {
         [Key]
         public int Id { get; set; }
