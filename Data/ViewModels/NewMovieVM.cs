@@ -8,6 +8,8 @@ namespace sinemaOtamasyonu.Models
 {
     public class NewMovieVM
     {
+        public int Id { get; set; }
+
         [Display(Name = "Movie name")]
         [Required(ErrorMessage ="Film ismi giriniz!")]
         public string Name { get; set; }
