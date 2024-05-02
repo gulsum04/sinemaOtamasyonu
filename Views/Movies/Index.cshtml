@@ -26,17 +26,17 @@
                     <div class="col-md-6">
                         <div class="card-body">
                             <p class="card-text">@item.Description</p>
-                            <p class="card-text"><b>Cinema: </b>@item.Cinema.Name</p>
-                            <p class="card-text"><b>Category: </b>@item.MovieCategory</p>
+                            <p class="card-text"><b>Sinema: </b>@item.Cinema.Name</p>
+                            <p class="card-text"><b>Kategori: </b>@item.MovieCategory</p>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="card-footer ">
                             <p class="card-text">
                                 <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id">
-                                    <i class="bi bi-eye-fill"></i> Show Details
+                                    <i class="bi bi-eye-fill"></i> Detaylar
                                     </a>
-                                <a class="btn btn-success text-white" asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@item.Id"><i class="bi bi-cart-plus"></i> Add to Cart (Price @item.Price.ToString("c"))</a>
+                                <a class="btn btn-success text-white" asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@item.Id"><i class="bi bi-cart-plus"></i> Sepete Ekle (Ücret @item.Price.ToString("c"))</a>
                               
                             </p>
                         </div>

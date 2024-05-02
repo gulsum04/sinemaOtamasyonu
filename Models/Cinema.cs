@@ -8,15 +8,15 @@ namespace sinemaOtamasyonu.Models
         [Key]
         public int Id { get; set; }
 
-        [Display(Name = "Cinema Logo")]
+        [Display(Name = "Sinema Logosu")]
         [Required(ErrorMessage = "Sinema Logosu giriniz!")]
         public string Logo { get; set; }
 
-        [Display(Name = "Cinema Name")]
+        [Display(Name = "Sinema Adı")]
         [Required(ErrorMessage = "Sinema adı giriniz!")]
         public string Name { get; set; }
 
-        [Display(Name = "Description")]
+        [Display(Name = "Adres")]
         [Required(ErrorMessage = "Adres giriniz!")]
         public string Description { get; set; }
         //ilişkiler

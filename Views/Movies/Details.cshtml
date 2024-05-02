@@ -24,21 +24,21 @@
                         <div class="card-body">
                             <p class="card-text">@Model.Description</p>
                             <p class="card-text">
-                              <b>Cinema: </b>
+                              <b>Sinema: </b>
                              <a asp-controller="Cinemas" asp-action="Details" asp-route-id="@Model.CinemaId">
                                @Model.Cinema.Name
                              </a>
                             </p>
                             <p class="card-text">
-                             <b>Producer: </b>
+                             <b>Yönetmen: </b>
                                <a asp-controller="Producers" asp-action="Details" asp-route-id="@Model.ProducerId">
                                  @Model.Producer.FullName
                                 </a>
                             </p>
 
-                            <p class="card-text"><b>Category: </b>@Model.MovieCategory</p>
+                            <p class="card-text"><b>Kategori: </b>@Model.MovieCategory</p>
                             <p class="card-text">
-                                <b>Actors:</b>
+                                <b>Aktörler:</b>
                                 <hr />
                                 <div class="row">
                                   @foreach(var actor in Model.Actors_Movies)
@@ -60,7 +60,7 @@
                                 <a class="btn btn-outline-primary float-right" asp-action="Index" >
                                     Listeye Geri Dön
                                 </a>
-                            <a class="btn btn-success text-white" asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@Model.Id"><i class="bi bi-cart-plus"></i> Add to Cart (Price @Model.Price.ToString("c"))</a>
+                            <a class="btn btn-success text-white" asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@Model.Id"><i class="bi bi-cart-plus"></i> Sepete Ekle (Fiyat @Model.Price.ToString("c"))</a>
 
                             </p>
                         </div>

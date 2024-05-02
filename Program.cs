@@ -5,6 +5,9 @@ using FluentAssertions.Common;
 using Microsoft.Extensions.Options;
 using sinemaOtamasyonu.Data.Services;
 using sinemaOtamasyonu.Data.Cart;
+using sinemaOtamasyonu.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace sinemaOtamasyonu
 {
@@ -24,7 +27,15 @@ namespace sinemaOtamasyonu
 
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             builder.Services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
+
+            //Authentication and authorization
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            builder.Services.AddMemoryCache();
             builder.Services.AddSession();
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -48,6 +59,10 @@ namespace sinemaOtamasyonu
             app.UseRouting();
             app.UseSession();
 
+            //Authentication and authorization
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseAuthorization();
 
             app.MapControllerRoute(
@@ -55,6 +70,7 @@ namespace sinemaOtamasyonu
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             AppDbInitializer.Seed(app);
+            AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
 
             app.Run();
         }
