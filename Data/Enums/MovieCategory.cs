@@ -7,11 +7,12 @@ namespace sinemaOtamasyonu.Data.Enums
 {
     public enum MovieCategory
     {
-        Action = 1,
-        Comedy,
+        Aksiyon = 1,
+        Komedi,
         Drama,
-        Documentary,
-        Cartoon,
-        Horror
+        Belgesel,
+        Animasyon,
+        Korku,
+        Bilimkurgu
     }
 }

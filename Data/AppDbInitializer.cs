@@ -144,7 +144,7 @@ namespace sinemaOtamasyonu.Data
 
                             CinemaId = 3,
                             ProducerId = 3,
-                            MovieCategory = MovieCategory.Documentary
+                            MovieCategory = MovieCategory.Belgesel
                         },
                         new Movie()
                         {
@@ -154,7 +154,7 @@ namespace sinemaOtamasyonu.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
 
                             ProducerId = 1,
-                            MovieCategory = MovieCategory.Action
+                            MovieCategory = MovieCategory.Aksiyon
                         },
                         new Movie()
                         {
@@ -165,7 +165,7 @@ namespace sinemaOtamasyonu.Data
 
                             CinemaId = 4,
                             ProducerId = 4,
-                            MovieCategory = MovieCategory.Horror
+                            MovieCategory = MovieCategory.Korku
                         },
                         new Movie()
                         {
@@ -176,7 +176,7 @@ namespace sinemaOtamasyonu.Data
 
                             CinemaId = 1,
                             ProducerId = 2,
-                            MovieCategory = MovieCategory.Documentary
+                            MovieCategory = MovieCategory.Belgesel
                         },
                         new Movie()
                         {
@@ -187,7 +187,7 @@ namespace sinemaOtamasyonu.Data
 
                             CinemaId = 1,
                             ProducerId = 3,
-                            MovieCategory = MovieCategory.Cartoon
+                            MovieCategory = MovieCategory.Animasyon
                         },
                         new Movie()
                         {
