@@ -5,11 +5,11 @@ namespace sinemaOtamasyonu.Data.ViewModels
     public class LoginVM
     {
         [Display(Name ="Email")]
-        [Required(ErrorMessage ="Mail giriniz!")]
+        [Required(ErrorMessage ="Email giriniz!")]
         public string EmailAddress { get; set; }
 
         [Display(Name = "Şifre")]
-        [Required]
+        [Required(ErrorMessage = "Şifre giriniz!")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }
