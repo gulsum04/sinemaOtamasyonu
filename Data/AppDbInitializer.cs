@@ -330,8 +330,8 @@ namespace sinemaOtamasyonu.Data
                 {
                     var newAdminUser = new ApplicationUser()
                     {
-                        FullName = "Admin User",
-                        UserName = "admin-user",
+                        FullName = "Admin",
+                        UserName = "admin",
                         Email = adminUserEmail,
                         EmailConfirmed= true
                     };
@@ -346,8 +346,8 @@ namespace sinemaOtamasyonu.Data
                 {
                     var newAppUser = new ApplicationUser()
                     {
-                        FullName = "Application User",
-                        UserName = "app-user",
+                        FullName = "App Kullanıcısı",
+                        UserName = "app-kullanıcı",
                         Email = appUserEmail,
                         EmailConfirmed = true
                     };

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using sinemaOtamasyonu.Data;
 using sinemaOtamasyonu.Data.Static;
 using sinemaOtamasyonu.Data.ViewModels;
@@ -18,6 +19,11 @@ namespace sinemaOtamasyonu.Controllers
             _userManager= userManager;
             _signInManager= signInManager;
             _context= context;
+        }
+        public async Task<IActionResult> Users()
+        {
+            var users= await _context.Users.ToListAsync();
+            return View(users);
         }
         public IActionResult Login() => View(new LoginVM());
 
@@ -52,6 +58,7 @@ namespace sinemaOtamasyonu.Controllers
         public async Task<IActionResult> Register(RegisterVM registerVM)
         {
             if (!ModelState.IsValid) return View(registerVM);
+
             var user = await _userManager.FindByEmailAsync(registerVM.EmailAddress);
             if (user != null)
             {
@@ -68,9 +75,8 @@ namespace sinemaOtamasyonu.Controllers
             var newUserResponse = await _userManager.CreateAsync(newUser, registerVM.Password);
 
             if (newUserResponse.Succeeded)
-
                 await _userManager.AddToRoleAsync(newUser, UserRoles.User);
-                return View("RegisterCompleted");
+            return View("RegisterCompleted");
         }
 
         [HttpPost]
