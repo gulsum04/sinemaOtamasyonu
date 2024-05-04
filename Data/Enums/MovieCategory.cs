@@ -9,7 +9,7 @@ namespace sinemaOtamasyonu.Data.Enums
     {
         Aksiyon = 1,
         Komedi,
-        Drama,
+        Dram,
         Belgesel,
         Animasyon,
         Korku,

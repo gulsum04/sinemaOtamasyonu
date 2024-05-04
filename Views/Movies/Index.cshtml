@@ -4,6 +4,7 @@
     ViewData["Title"] = "List of Movies";
 }
 
+
 <div class="row">
     @foreach (var item in Model)
     {
@@ -12,19 +13,15 @@
                 <div class="row g-0">
                     <div class="col-md-12">
                         <div class="card-header text-white bg-info">
-                            <p class="card-text">
-                                <h5 class="card-title">
-                                    @item.Name
-                                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
-                                    {
-                                        <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
-                                    }
-                                </h5>
-                            </p>
+                            <h5 class="card-title">@item.Name</h5>
+                            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                            {
+                                <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                            }
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="@item.ImageURL" width="100%" alt="@item.Name">
+                        <img src="@item.ImageURL" width="100%" alt="@item.Name" />
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
@@ -34,14 +31,9 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="card-footer ">
-                            <p class="card-text">
-                                <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id">
-                                    <i class="bi bi-eye-fill"></i> Detaylar
-                                    </a>
-                                <a class="btn btn-success text-white" asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@item.Id"><i class="bi bi-cart-plus"></i> Sepete Ekle (Ücret @item.Price.ToString("c"))</a>
-                              
-                            </p>
+                        <div class="card-footer">
+                            <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye-fill"></i> Detaylar</a>
+                            <a class="btn btn-success text-white" asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@item.Id"><i class="bi bi-cart-plus"></i> Sepete Ekle (Ücret @item.Price.ToString("c"))</a>
                         </div>
                     </div>
                 </div>

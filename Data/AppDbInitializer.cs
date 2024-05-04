@@ -21,33 +21,33 @@ namespace sinemaOtamasyonu.Data
                     {
                         new Cinema()
                         {
-                            Name = "Cinema 1",
+                            Name = "Paribu Cineverse Akasya",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "Acıbadem Mahallesi Çeçen Sokak No:25 Üsküdar/İstanbul"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 2",
+                            Name = "Paribu Cineverse Zorlu Center",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "Zorlu Center AVM Beşiktaş/İstanbul"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 3",
+                            Name = "AKM Yeşilçam Sineması",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-3.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "Atatürk Kültür Merkezi, 34435 Beyoğlu/İstanbul"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 4",
+                            Name = "Kadıköy Sineması",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-4.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "Osmanağa, Bahariye Cad. Kadıköy Pasajı No:25, 34714 Kadıköy/İstanbul"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 5",
+                            Name = "Paribu Cineverse Kocaeli",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-5.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "Sanayi Mah. Ömer Türkçakal Bulvarı No: 7, 41040 İzmit/Kocaeli"
                         },
                     });
                     context.SaveChanges();
@@ -59,33 +59,33 @@ namespace sinemaOtamasyonu.Data
                     {
                         new Actor()
                         {
-                            FullName = "Actor 1",
-                            Bio = "This is the Bio of the first actor",
+                            FullName = "Ahmet Mümtaz Taylan",
+                            Bio = "Bio",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-1.jpeg"
 
                         },
                         new Actor()
                         {
-                            FullName = "Actor 2",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Zeynep Çamcı",
+                            Bio = "Bio",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-2.jpeg"
                         },
                         new Actor()
                         {
-                            FullName = "Actor 3",
+                            FullName = "Necip Memili",
                             Bio = "This is the Bio of the second actor",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-3.jpeg"
                         },
                         new Actor()
                         {
-                            FullName = "Actor 4",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Aras Bulut İynemli",
+                            Bio = "Bio",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-4.jpeg"
                         },
                         new Actor()
                         {
-                            FullName = "Actor 5",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Esra Bilgiç",
+                            Bio = "Bio",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-5.jpeg"
                         }
                     });
@@ -98,33 +98,33 @@ namespace sinemaOtamasyonu.Data
                     {
                         new Producer()
                         {
-                            FullName = "Producer 1",
-                            Bio = "This is the Bio of the first actor",
+                            FullName = "Mehmet Ada Öztekin",
+                            Bio = "Bio",
                             ProfilePictureURL = "http://dotnethow.net/images/producers/producer-1.jpeg"
 
                         },
                         new Producer()
                         {
-                            FullName = "Producer 2",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Tolga Örnek",
+                            Bio = " Bio",
                             ProfilePictureURL = "http://dotnethow.net/images/producers/producer-2.jpeg"
                         },
                         new Producer()
                         {
-                            FullName = "Producer 3",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Yorgos Lanthimos",
+                            Bio = "Bio",
                             ProfilePictureURL = "http://dotnethow.net/images/producers/producer-3.jpeg"
                         },
                         new Producer()
                         {
-                            FullName = "Producer 4",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "İlker Çatak",
+                            Bio = "Bio",
                             ProfilePictureURL = "http://dotnethow.net/images/producers/producer-4.jpeg"
                         },
                         new Producer()
                         {
-                            FullName = "Producer 5",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Erman Bostan",
+                            Bio = "Bio",
                             ProfilePictureURL = "http://dotnethow.net/images/producers/producer-5.jpeg"
                         }
                     });
@@ -198,7 +198,7 @@ namespace sinemaOtamasyonu.Data
 
                             CinemaId = 1,
                             ProducerId = 5,
-                            MovieCategory = MovieCategory.Drama
+                            MovieCategory = MovieCategory.Dram
                         }
                     });
                     context.SaveChanges();

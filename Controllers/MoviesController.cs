@@ -31,7 +31,7 @@ namespace sinemaOtamasyonu.Controllers
             var allMovies = await _service.GetAllAsync(n => n.Cinema);
             if (!string.IsNullOrEmpty(searchString))
             {
-                var filterResult=allMovies.Where(n=>n.Name.Contains(searchString)|| n.Description.Contains(searchString)).ToList();
+                var filterResult = allMovies.Where(n => n.Name.Contains(searchString) || n.Description.Contains(searchString)).ToList();
                 return View("Index", filterResult);
             }
 
@@ -51,7 +51,8 @@ namespace sinemaOtamasyonu.Controllers
             var movieDropdownsData = await _service.GetNewMovieDropdownsValues();
             ViewBag.Cinemas = new SelectList(movieDropdownsData.Cinemas, "Id", "Name");
             ViewBag.Producers = new SelectList(movieDropdownsData.Producers, "Id", "FullName");
-            ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
+            ViewBag.Actors = new SelectList(movieDropdownsData.Actors.OrderBy(a => a.Id), "Id", "FullName");
+            //ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
             return View();
         }
 
@@ -63,7 +64,9 @@ namespace sinemaOtamasyonu.Controllers
                 var movieDropdownsData = await _service.GetNewMovieDropdownsValues();
                 ViewBag.Cinemas = new SelectList(movieDropdownsData.Cinemas, "Id", "Name");
                 ViewBag.Producers = new SelectList(movieDropdownsData.Producers, "Id", "FullName");
-                ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
+                ViewBag.Actors = new SelectList(movieDropdownsData.Actors.OrderBy(a => a.Id), "Id", "FullName");
+                //ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
+
                 return View(movie);
             }
             await _service.AddNewMovieAsync(movie);
@@ -92,7 +95,8 @@ namespace sinemaOtamasyonu.Controllers
             var movieDropdownsData = await _service.GetNewMovieDropdownsValues();
             ViewBag.Cinemas = new SelectList(movieDropdownsData.Cinemas, "Id", "Name");
             ViewBag.Producers = new SelectList(movieDropdownsData.Producers, "Id", "FullName");
-            ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
+            //ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
+            ViewBag.Actors = new SelectList(movieDropdownsData.Actors.OrderBy(a => a.Id), "Id", "FullName");
 
             return View(response);
         }
@@ -109,7 +113,8 @@ namespace sinemaOtamasyonu.Controllers
 
                 ViewBag.Cinemas = new SelectList(movieDropdownsData.Cinemas, "Id", "Name");
                 ViewBag.Producers = new SelectList(movieDropdownsData.Producers, "Id", "FullName");
-                ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
+                //ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
+                ViewBag.Actors = new SelectList(movieDropdownsData.Actors.OrderBy(a => a.Id), "Id", "FullName");
 
                 return View(movie);
             }
@@ -121,4 +126,3 @@ namespace sinemaOtamasyonu.Controllers
     }
 
 }
-
