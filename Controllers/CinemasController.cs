@@ -20,7 +20,7 @@ namespace sinemaOtamasyonu.Controllers
             return View(allCinemas);
         }
 
-        //Get:Cinemas/Create
+        //Sinema/Ekle
         public IActionResult Create()
         {
             return View();
@@ -33,8 +33,7 @@ namespace sinemaOtamasyonu.Controllers
             await _service.AddAsync(cinema);
             return RedirectToAction(nameof(Index));
         }
-
-        //Get:Cinemas/Details/1
+        //Sinema/Detay
         public async Task<IActionResult> Details(int id)
         {
             var cinemaDetails = await _service.GetByIdAsync(id);
@@ -43,7 +42,7 @@ namespace sinemaOtamasyonu.Controllers
             return View(cinemaDetails);
         }
 
-        //Get: Cinemas/Edit
+        //Sinema/Edit
         public async Task<IActionResult> Edit(int id)
         {
             var cinemaDetails = await _service.GetByIdAsync(id);
@@ -62,7 +61,7 @@ namespace sinemaOtamasyonu.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //Get:Cinemas/Delete/1
+        //Sinema/sil
         public async Task<IActionResult> Delete(int id)
         {
             var cinemaDetails = await _service.GetByIdAsync(id);

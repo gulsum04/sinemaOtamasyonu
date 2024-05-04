@@ -1,7 +1,7 @@
 ﻿@model Movie
 
 @{
-    ViewData["Title"] = "Movie details";
+    ViewData["Title"] = "Film detayları";
 }
 
 <div class="row">
@@ -9,7 +9,7 @@
         <div class="card mb-12">
             <div class="row g-0">
                 <div class="col-md-12">
-                    <div class="card-header text-white bg-info">
+                    <div class="card-header text-white bg-warning">
                         <h5 class="card-title">@Model.Name</h5>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                         <p class="card-text"><b>Yönetmen: </b><a asp-controller="Producers" asp-action="Details" asp-route-id="@Model.ProducerId">@Model.Producer.FullName</a></p>
                         <p class="card-text"><b>Kategori: </b>@Model.MovieCategory</p>
                         <p class="card-text">
-                            <b>Aktörler:</b><hr />
+                            <b>Oyuncular:</b><hr />
                             <div class="row">
                                 @foreach (var actor in Model.Actors_Movies)
                                 {

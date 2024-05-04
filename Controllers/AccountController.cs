@@ -76,7 +76,7 @@ namespace sinemaOtamasyonu.Controllers
 
             if (newUserResponse.Succeeded)
                 await _userManager.AddToRoleAsync(newUser, UserRoles.User);
-            return View("RegisterCompleted");
+            return View("RegisterSuccess");
         }
 
         [HttpPost]

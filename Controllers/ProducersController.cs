@@ -20,7 +20,7 @@ namespace sinemaOtamasyonu.Controllers
             return View(allProducers);
         }
       
-        //get:producers/create
+        //Yönetmen/Ekle
         public IActionResult Create()
         {
             return View();
@@ -36,7 +36,7 @@ namespace sinemaOtamasyonu.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //get:producers/details/1
+        //Yönetmen/Detay
         public async Task<IActionResult> Details(int id)
         {
             var producerDetails = await _service.GetByIdAsync(id);
@@ -64,7 +64,7 @@ namespace sinemaOtamasyonu.Controllers
             return View(producer);
         }
 
-        //Get: Producers/Delete/1
+        //Yönetmen/Sil
         public async Task<IActionResult> Delete(int id)
         {
             var producerDetails = await _service.GetByIdAsync(id);

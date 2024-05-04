@@ -17,12 +17,11 @@ namespace sinemaOtamasyonu.Controllers
         }
         public async Task<IActionResult> Index()
         {
-           // var allActors = await _context.Actors.ToListAsync();
             var allActors = await _service.GetAllAsync();
             return View(allActors);
         }
 
-        //Get: Actors/Create
+        //Oyuncu/Ekle
         public IActionResult Create()
         {
             return View();
@@ -39,7 +38,7 @@ namespace sinemaOtamasyonu.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //Get:Actors/Details/1
+        //Oyuncu/Detay
         public async Task<IActionResult> Details(int id)
         {
             var actorDetails = await _service.GetByIdAsync(id);
@@ -48,7 +47,7 @@ namespace sinemaOtamasyonu.Controllers
             return View(actorDetails);
         }
 
-        //Get: Actors/Edit
+        //Oyuncu/Edit
         public async Task <IActionResult> Edit(int id)
         {
             var actorDetails = await _service.GetByIdAsync(id);
@@ -67,7 +66,7 @@ namespace sinemaOtamasyonu.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //Get: Actors/Delete/1
+        //Oyuncu/Sil
         public async Task<IActionResult> Delete(int id)
         {
             var actorDetails = await _service.GetByIdAsync(id);

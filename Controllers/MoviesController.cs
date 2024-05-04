@@ -38,14 +38,14 @@ namespace sinemaOtamasyonu.Controllers
             return View("Index", allMovies);
         }
 
-        //get:movies:details/1
+        //Film/Detay
         public async Task<IActionResult> Details(int id)
         {
             var movieDetail = await _service.GetMovieByIdAsync(id);
             return View(movieDetail);
         }
 
-        //get/movies/create
+        //Film/Ekle
         public async Task<IActionResult> Create()
         {
             var movieDropdownsData = await _service.GetNewMovieDropdownsValues();
@@ -65,7 +65,6 @@ namespace sinemaOtamasyonu.Controllers
                 ViewBag.Cinemas = new SelectList(movieDropdownsData.Cinemas, "Id", "Name");
                 ViewBag.Producers = new SelectList(movieDropdownsData.Producers, "Id", "FullName");
                 ViewBag.Actors = new SelectList(movieDropdownsData.Actors.OrderBy(a => a.Id), "Id", "FullName");
-                //ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
 
                 return View(movie);
             }
@@ -73,7 +72,7 @@ namespace sinemaOtamasyonu.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //GET: Movies/Edit/1
+        //Film/Edit
         public async Task<IActionResult> Edit(int id)
         {
             var movieDetails = await _service.GetMovieByIdAsync(id);
@@ -95,7 +94,6 @@ namespace sinemaOtamasyonu.Controllers
             var movieDropdownsData = await _service.GetNewMovieDropdownsValues();
             ViewBag.Cinemas = new SelectList(movieDropdownsData.Cinemas, "Id", "Name");
             ViewBag.Producers = new SelectList(movieDropdownsData.Producers, "Id", "FullName");
-            //ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
             ViewBag.Actors = new SelectList(movieDropdownsData.Actors.OrderBy(a => a.Id), "Id", "FullName");
 
             return View(response);
@@ -113,7 +111,6 @@ namespace sinemaOtamasyonu.Controllers
 
                 ViewBag.Cinemas = new SelectList(movieDropdownsData.Cinemas, "Id", "Name");
                 ViewBag.Producers = new SelectList(movieDropdownsData.Producers, "Id", "FullName");
-                //ViewBag.Actors = new SelectList(movieDropdownsData.Actors, "Id", "FullName");
                 ViewBag.Actors = new SelectList(movieDropdownsData.Actors.OrderBy(a => a.Id), "Id", "FullName");
 
                 return View(movie);

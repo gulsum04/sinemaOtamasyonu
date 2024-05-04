@@ -14,7 +14,8 @@ namespace sinemaOtamasyonu.Data
                 var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
 
                 context.Database.EnsureCreated();
-                //Cinema
+
+                //Sinemalar
                 if (!context.Cinemas.Any())
                 {
                     context.Cinemas.AddRange(new List<Cinema>()
@@ -52,7 +53,7 @@ namespace sinemaOtamasyonu.Data
                     });
                     context.SaveChanges();
                 }
-                //Actors
+                //Oyuncular
                 if (!context.Actors.Any())
                 {
                     context.Actors.AddRange(new List<Actor>()
@@ -91,7 +92,7 @@ namespace sinemaOtamasyonu.Data
                     });
                     context.SaveChanges();
                 }
-                //Producers
+                //Yönetmenler
                 if (!context.Producers.Any())
                 {
                     context.Producers.AddRange(new List<Producer>()
@@ -130,70 +131,70 @@ namespace sinemaOtamasyonu.Data
                     });
                     context.SaveChanges();
                 }
-                //Movies
+                //Filmler
                 if (!context.Movies.Any())
                 {
                     context.Movies.AddRange(new List<Movie>()
                     {
                         new Movie()
                         {
-                            Name = "Life",
-                            Description = "This is the Life movie description",
-                            Price = 39.50,
+                            Name = "Arap Kadri",
+                            Description = "Arap kadri film içeriği",
+                            Price = 99.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
 
                             CinemaId = 3,
                             ProducerId = 3,
+                            MovieCategory = MovieCategory.Komedi
+                        },
+                        new Movie()
+                        {
+                            Name = "Atatürk 2",
+                            Description = "Atatürk 2 film içeriği",
+                            Price = 119.50,
+                            ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
+
+                            ProducerId = 1,
                             MovieCategory = MovieCategory.Belgesel
                         },
                         new Movie()
                         {
-                            Name = "The Shawshank Redemption",
-                            Description = "This is the Shawshank Redemption description",
-                            Price = 29.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
-
-                            ProducerId = 1,
-                            MovieCategory = MovieCategory.Aksiyon
-                        },
-                        new Movie()
-                        {
-                            Name = "Ghost",
-                            Description = "This is the Ghost movie description",
-                            Price = 39.50,
+                            Name = "Mucize Aynalar",
+                            Description = "Mucize aynalar film içeriği",
+                            Price = 139.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
 
                             CinemaId = 4,
                             ProducerId = 4,
-                            MovieCategory = MovieCategory.Korku
+                            MovieCategory = MovieCategory.Komedi
                         },
                         new Movie()
                         {
-                            Name = "Race",
-                            Description = "This is the Race movie description",
-                            Price = 39.50,
+                            Name = "Cadı",
+                            Description = "Cadı film içeriği",
+                            Price = 119.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-6.jpeg",
 
                             CinemaId = 1,
                             ProducerId = 2,
-                            MovieCategory = MovieCategory.Belgesel
+                            MovieCategory = MovieCategory.Dram
                         },
                         new Movie()
                         {
-                            Name = "Scoob",
-                            Description = "This is the Scoob movie description",
-                            Price = 39.50,
+                            Name = "Zavallılar",
+                            Description = "Zavallılar film içeriği",
+                            Price = 89.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
 
                             CinemaId = 1,
                             ProducerId = 3,
-                            MovieCategory = MovieCategory.Animasyon
+                            MovieCategory = MovieCategory.Bilimkurgu
                         },
                         new Movie()
                         {
-                            Name = "Cold Soles",
-                            Description = "This is the Cold Soles movie description",
-                            Price = 39.50,
+                            Name = "Öğretmenler Odası",
+                            Description = "Öğretmenler odası film içeriği",
+                            Price = 99.50,
                             ImageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
 
                             CinemaId = 1,
@@ -312,7 +313,7 @@ namespace sinemaOtamasyonu.Data
             using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
 
-                //roles 
+                //kullanıcı rolleri
                 var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
                 if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
@@ -321,7 +322,7 @@ namespace sinemaOtamasyonu.Data
                 if (!await roleManager.RoleExistsAsync(UserRoles.User))
                     await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
 
-                //users
+                //kullanıcılar
                 var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
                 string adminUserEmail = "admin@sinema.com";
 
