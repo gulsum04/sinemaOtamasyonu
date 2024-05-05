@@ -5,6 +5,7 @@ namespace sinemaOtamasyonu.Models
 {
     public class Actor:IEntityBase
     {
+        //migration ve ilişki oluşturmahttps://www.youtube.com/watch?v=YjXJeA4sx6g&list=PLKnjBHu2xXNOld1njNVQ5fk0e12oqiWc8&index=32
         [Key]
         public int Id { get; set; }
 

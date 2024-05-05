@@ -23,31 +23,31 @@ namespace sinemaOtamasyonu.Data
                         new Cinema()
                         {
                             Name = "Paribu Cineverse Akasya",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
+                            Logo = "https://pbs.twimg.com/profile_images/1658731825483640832/ic5o9flE_400x400.jpg",
                             Description = "Acıbadem Mahallesi Çeçen Sokak No:25 Üsküdar/İstanbul"
                         },
                         new Cinema()
                         {
                             Name = "Paribu Cineverse Zorlu Center",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
+                            Logo = "https://pbs.twimg.com/profile_images/1658731825483640832/ic5o9flE_400x400.jpg",
                             Description = "Zorlu Center AVM Beşiktaş/İstanbul"
                         },
                         new Cinema()
                         {
                             Name = "AKM Yeşilçam Sineması",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-3.jpeg",
+                            Logo = "https://www.turizminsesi.com/d/news/53372.jpg",
                             Description = "Atatürk Kültür Merkezi, 34435 Beyoğlu/İstanbul"
                         },
                         new Cinema()
                         {
                             Name = "Kadıköy Sineması",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-4.jpeg",
+                            Logo = "https://www.kadikoysinemasi.com/wp-content/uploads/2019/08/LOGOKS.png",
                             Description = "Osmanağa, Bahariye Cad. Kadıköy Pasajı No:25, 34714 Kadıköy/İstanbul"
                         },
                         new Cinema()
                         {
                             Name = "Paribu Cineverse Kocaeli",
-                            Logo = "http://dotnethow.net/images/cinemas/cinema-5.jpeg",
+                            Logo = "https://pbs.twimg.com/profile_images/1658731825483640832/ic5o9flE_400x400.jpg",
                             Description = "Sanayi Mah. Ömer Türkçakal Bulvarı No: 7, 41040 İzmit/Kocaeli"
                         },
                     });
@@ -62,32 +62,32 @@ namespace sinemaOtamasyonu.Data
                         {
                             FullName = "Ahmet Mümtaz Taylan",
                             Bio = "Bio",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-1.jpeg"
+                            ProfilePictureURL = "https://b6s54eznn8xq.merlincdn.net/Uploads/People/ae83d60d4e794cfaa9e529b34de205fe.jpg"
 
                         },
                         new Actor()
                         {
                             FullName = "Zeynep Çamcı",
                             Bio = "Bio",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-2.jpeg"
+                            ProfilePictureURL = "https://b6s54eznn8xq.merlincdn.net/Uploads/People/zeynep-camci-2019122721493.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Necip Memili",
                             Bio = "This is the Bio of the second actor",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-3.jpeg"
+                            ProfilePictureURL = "https://b6s54eznn8xq.merlincdn.net/Uploads/People/45ec8046d8704d5681f1dd36e8d48f7b.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Aras Bulut İynemli",
                             Bio = "Bio",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-4.jpeg"
+                            ProfilePictureURL = "https://b6s54eznn8xq.merlincdn.net/Uploads/People/80040411bb3846bf8175652994878efa.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Esra Bilgiç",
                             Bio = "Bio",
-                            ProfilePictureURL = "http://dotnethow.net/images/actors/actor-5.jpeg"
+                            ProfilePictureURL = "https://www.cumhuriyet.com.tr/thumbs/1520x900/Archive/2024/2/20/2177663/kapak_173948.jpg"
                         }
                     });
                     context.SaveChanges();
@@ -101,32 +101,32 @@ namespace sinemaOtamasyonu.Data
                         {
                             FullName = "Mehmet Ada Öztekin",
                             Bio = "Bio",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-1.jpeg"
+                            ProfilePictureURL = "https://admin.biyografya.com/_docs/photos/1c971da6a668ee39dbb24cd388d319a9.jpg"
 
                         },
                         new Producer()
                         {
                             FullName = "Tolga Örnek",
                             Bio = " Bio",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-2.jpeg"
+                            ProfilePictureURL = "https://img05.imgsinemalar.com/images/afis_buyuk/t/tolga-ornek-1708966709.jpg"
                         },
                         new Producer()
                         {
                             FullName = "Yorgos Lanthimos",
                             Bio = "Bio",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-3.jpeg"
+                            ProfilePictureURL = "https://b6s54eznn8xq.merlincdn.net/Uploads/People/e3a76cd4-a94a-4791-b0d1-553b3495739a_indir%20(1).jpg"
                         },
                         new Producer()
                         {
                             FullName = "İlker Çatak",
                             Bio = "Bio",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-4.jpeg"
+                            ProfilePictureURL = "https://b6s54eznn8xq.merlincdn.net/Uploads/People/9ee1da86d86d4a74abb72bd1a4b7e5bb.jpg"
                         },
                         new Producer()
                         {
                             FullName = "Erman Bostan",
                             Bio = "Bio",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-5.jpeg"
+                            ProfilePictureURL = "https://tr.web.img4.acsta.net/pictures/24/02/27/09/33/0385925.png"
                         }
                     });
                     context.SaveChanges();
@@ -141,7 +141,7 @@ namespace sinemaOtamasyonu.Data
                             Name = "Arap Kadri",
                             Description = "Arap kadri film içeriği",
                             Price = 99.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
+                            ImageURL = "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/arap-kadri-20244812303976e92b90ad8546fc91c577dac0c7b180.jpg",
 
                             CinemaId = 3,
                             ProducerId = 3,
@@ -152,7 +152,7 @@ namespace sinemaOtamasyonu.Data
                             Name = "Atatürk 2",
                             Description = "Atatürk 2 film içeriği",
                             Price = 119.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
+                            ImageURL = "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ataturk-1881-1919-2-film-2023121913854c6b0e5668ef34f4aa573a01225a4beb8.jpg",
 
                             ProducerId = 1,
                             MovieCategory = MovieCategory.Belgesel
@@ -162,7 +162,7 @@ namespace sinemaOtamasyonu.Data
                             Name = "Mucize Aynalar",
                             Description = "Mucize aynalar film içeriği",
                             Price = 139.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
+                            ImageURL = "https://tr.web.img4.acsta.net/pictures/24/02/26/09/27/4719597.jpg",
 
                             CinemaId = 4,
                             ProducerId = 4,
@@ -173,7 +173,7 @@ namespace sinemaOtamasyonu.Data
                             Name = "Cadı",
                             Description = "Cadı film içeriği",
                             Price = 119.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-6.jpeg",
+                            ImageURL = "https://tr.web.img3.acsta.net/img/1a/e0/1ae081c69c6f3a471daf2abd5d19d88c.jpg",
 
                             CinemaId = 1,
                             ProducerId = 2,
@@ -184,7 +184,7 @@ namespace sinemaOtamasyonu.Data
                             Name = "Zavallılar",
                             Description = "Zavallılar film içeriği",
                             Price = 89.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
+                            ImageURL = "https://tr.web.img4.acsta.net/c_310_420/pictures/23/09/29/13/54/3977793.jpg",
 
                             CinemaId = 1,
                             ProducerId = 3,
@@ -195,7 +195,7 @@ namespace sinemaOtamasyonu.Data
                             Name = "Öğretmenler Odası",
                             Description = "Öğretmenler odası film içeriği",
                             Price = 99.50,
-                            ImageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
+                            ImageURL = "https://b6s54eznn8xq.merlincdn.net/Uploads/Films/ogretmenler-odasi-2024131732280efebc6d18924a2a82028acb747623de.JPG",
 
                             CinemaId = 1,
                             ProducerId = 5,
@@ -313,7 +313,7 @@ namespace sinemaOtamasyonu.Data
             using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
 
-                //kullanıcı rolleri
+                //kullanıcı rol belirleme işlemihttps://www.youtube.com/watch?v=6QevlnaSDRw
                 var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
                 if (!await roleManager.RoleExistsAsync(UserRoles.Admin))

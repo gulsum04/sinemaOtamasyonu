@@ -9,6 +9,8 @@ namespace sinemaOtamasyonu.Migrations
     public partial class IdentityAdded : Migration
     {
         /// <inheritdoc />
+        /// 
+         //Identity Kütüphanesinin eklenmesihttps://www.youtube.com/watch?v=KVbXzT2xHe0&list=RDCMUCbkbOlw8snP93RJ2BhH44Qw&index=4
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(

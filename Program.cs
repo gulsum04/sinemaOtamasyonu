@@ -18,7 +18,7 @@ namespace sinemaOtamasyonu
             var builder = WebApplication.CreateBuilder(args);
             var configuration = builder.Configuration; // IConfiguration arayüzüne eriþim
 
-            //Services configiuration
+            //Services configiurationhttps://www.youtube.com/watch?v=V3PQfPbyxOQ
             builder.Services.AddScoped<IActorsService, ActorsService>();
             builder.Services.AddScoped<IProducersService, ProducersService>();
             builder.Services.AddScoped<ICinemasService, CinemasService>();

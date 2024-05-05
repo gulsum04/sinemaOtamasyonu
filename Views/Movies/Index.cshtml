@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 card-image">
-                        <!-- Add card-image class here -->
+                        
                         <img src="@item.ImageURL" width="100%" alt="@item.Name" style="transition: transform 0.3s ease;" class="img-fluid" />
                     </div>
                     <div class="col-md-6">
@@ -43,6 +43,7 @@
 @await Html.PartialAsync("_CreateItem","Movies")
 
 <style>
+    /*animasyon ekleme kaynak:chatgpt*/
     .card-image {
         overflow: hidden;
         position: relative;

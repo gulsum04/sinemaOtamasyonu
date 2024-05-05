@@ -21,6 +21,7 @@ namespace sinemaOtamasyonu.Controllers
         }
 
         //Sinema/Ekle
+        //veri eklemehttps://www.youtube.com/watch?v=iJGGFZDMU4U&list=PLKnjBHu2xXNOld1njNVQ5fk0e12oqiWc8&index=68
         public IActionResult Create()
         {
             return View();
@@ -43,6 +44,7 @@ namespace sinemaOtamasyonu.Controllers
         }
 
         //Sinema/Edit
+        //veri güncellemehttps://www.youtube.com/watch?v=U4YylIXfRe8&list=PLKnjBHu2xXNOld1njNVQ5fk0e12oqiWc8&index=69
         public async Task<IActionResult> Edit(int id)
         {
             var cinemaDetails = await _service.GetByIdAsync(id);
@@ -62,6 +64,7 @@ namespace sinemaOtamasyonu.Controllers
         }
 
         //Sinema/sil
+        //veri silme işlemihttps://www.youtube.com/watch?v=kvGh3-e4dEY&list=PLKnjBHu2xXNOld1njNVQ5fk0e12oqiWc8&index=70
         public async Task<IActionResult> Delete(int id)
         {
             var cinemaDetails = await _service.GetByIdAsync(id);

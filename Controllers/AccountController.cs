@@ -10,6 +10,9 @@ namespace sinemaOtamasyonu.Controllers
 {
     public class AccountController : Controller
     {
+
+        //Kullanıcı giriş-çıkış ve kayıt oluşturma işlemlerihttps://www.youtube.com/watch?v=0wntO75pZUs
+
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly AppDbContext _context;
@@ -51,7 +54,8 @@ namespace sinemaOtamasyonu.Controllers
             return View(loginVM);
         }
 
-        
+
+        //register backendhttps://www.youtube.com/watch?v=Qq5cYYsnhpk&list=RDCMUCbkbOlw8snP93RJ2BhH44Qw&index=5
         public IActionResult Register() => View(new RegisterVM());
 
         [HttpPost]
@@ -78,6 +82,8 @@ namespace sinemaOtamasyonu.Controllers
                 await _userManager.AddToRoleAsync(newUser, UserRoles.User);
             return View("RegisterSuccess");
         }
+
+        //Hesaptan çıkış işlemihttps://www.youtube.com/watch?v=6UvkhJ9hdjA&list=PLKnjBHu2xXNOld1njNVQ5fk0e12oqiWc8&index=87
 
         [HttpPost]
         public async Task<IActionResult> Logout()

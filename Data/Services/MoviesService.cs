@@ -30,8 +30,8 @@ namespace sinemaOtamasyonu.Data.Services
             await _context.Movies.AddAsync(newMovie);
             await _context.SaveChangesAsync();
 
-            //Add Movie Actors
-            foreach(var actorId in data.ActorIds)
+            //veri eklemehttps://www.youtube.com/watch?v=Qq5cYYsnhpk&list=RDCMUCbkbOlw8snP93RJ2BhH44Qw&index=5
+            foreach (var actorId in data.ActorIds)
             {
                 var newActorMovie = new Actor_Movie()
                 {
@@ -67,7 +67,8 @@ namespace sinemaOtamasyonu.Data.Services
 
         public async Task UpdateMovieAsync(NewMovieVM data)
         {
-            var dbMovie=await _context.Movies.FirstOrDefaultAsync(n=>n.Id== data.Id);
+            //verigüncellemehttps://www.youtube.com/watch?v=MDiMVWM763g&list=PLXuv2PShkuHx8VavFvqVGWZ4HjQFgf5wo&index=37
+            var dbMovie =await _context.Movies.FirstOrDefaultAsync(n=>n.Id== data.Id);
             if (dbMovie != null)
             {
 

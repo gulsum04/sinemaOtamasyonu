@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 
 namespace sinemaOtamasyonu.Data.Base
 {
+    //interface ve repositorylerin yazılmasıhttps://www.youtube.com/watch?v=MleB4lXLxo4&list=RDCMUCbkbOlw8snP93RJ2BhH44Qw&index=4
     public class EntityBaseRepository<T> : IEntityBaseRepository<T> where T : class, IEntityBase, new()
     {
 

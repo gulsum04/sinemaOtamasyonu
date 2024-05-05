@@ -26,6 +26,7 @@ namespace sinemaOtamasyonu.Controllers
             return View(allMovies);
         }
 
+        //veri filtrelemehttps://www.youtube.com/watch?v=7Nhxm-MgWA8
         public async Task<IActionResult> Filter(string searchString)
         {
             var allMovies = await _service.GetAllAsync(n => n.Cinema);

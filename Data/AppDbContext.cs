@@ -5,6 +5,9 @@ using sinemaOtamasyonu.Models;
 namespace sinemaOtamasyonu.Data
 
 {
+    //Identity Kütüphanesinin eklenmesihttps://www.youtube.com/watch?v=KVbXzT2xHe0&list=RDCMUCbkbOlw8snP93RJ2BhH44Qw&index=4
+    //veri tabanı bağlantısıhttps://www.youtube.com/watch?v=CtWG-W-olLc
+    //diğer kaynakhttps://www.youtube.com/watch?v=V3PQfPbyxOQ
     public class AppDbContext:IdentityDbContext<ApplicationUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) 
@@ -31,7 +34,7 @@ namespace sinemaOtamasyonu.Data
         public DbSet<Producer> Producers { get; set; }
 
 
-        //Order related tables
+        //siparş tabloları
         public DbSet<Order>Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
